@@ -12,56 +12,56 @@ const destinations = [
     tours: 25,
     departures: 164,
     guestsTravelled: 59348,
-    image: "https://placehold.co/600x400"
+    image: "/rajasthan.jpg"
   },
   {
     name: "Kerala",
     tours: 20,
     departures: 144,
     guestsTravelled: 43609,
-    image: "https://placehold.co/600x400"
+    image: "/kerala.jpg"
   },
   {
     name: "Jammu and Kashmir",
     tours: 18,
     departures: 123,
     guestsTravelled: 60125,
-    image: "https://placehold.co/600x400"
+    image: "/kashmir.jpg"
   },
   {
     name: "Sikkim Darjeeling",
     tours: 10,
     departures: 37,
     guestsTravelled: 17234,
-    image: "https://placehold.co/600x400"
+    image: "/sikkim.jpg"
   },
   {
     name: "Europe",
     tours: 88,
     departures: 80,
     guestsTravelled: 85655,
-    image: "https://placehold.co/600x400"
+    image: "/europe.jpg"
   },
   {
     name: "South East Asia",
     tours: 57,
     departures: 230,
     guestsTravelled: 127030,
-    image: "https://placehold.co/600x400"
+    image: "/asia.jpg"
   },
   {
     name: "Dubai Egypt Israel",
     tours: 25,
     departures: 61,
     guestsTravelled: 35792,
-    image: "https://placehold.co/600x400"
+    image: "/dubai.jpg"
   },
   {
     name: "Australia New Zealand",
     tours: 38,
     departures: 35,
     guestsTravelled: 11721,
-    image: "https://placehold.co/600x400"
+    image: "/australia.jpg"
   }
 ]
 
@@ -156,8 +156,8 @@ export default function TravelShowcase() {
         {/* Bento Grid Section */}
         <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
           {destinations.map((destination, index) => (
-            <Card key={index} className="group relative overflow-hidden">
-              <div className="relative h-[200px] overflow-hidden">
+            <Card key={index} className="group relative overflow-hidden h-[240px]">
+              <div className="relative h-full">
                 <img
                   src={destination.image}
                   alt={destination.name}
@@ -165,13 +165,22 @@ export default function TravelShowcase() {
                 />
                 <div className="absolute inset-0 bg-black/40" />
                 <div className="absolute inset-0 p-4 flex flex-col justify-between text-white">
-                  <h3 className="text-xl font-bold">{destination.name}</h3>
-                  <div className="space-y-1 text-sm">
-                    <p className="flex justify-between">
-                      <span>{destination.tours} tours</span>
-                      <span>{destination.departures} departures</span>
-                    </p>
-                    <p>{destination.guestsTravelled.toLocaleString()} guests travelled</p>
+                  <h3 className="text-2xl font-bold leading-tight">{destination.name}</h3>
+                  <div className="bg-white/80 backdrop-blur-sm rounded-lg p-2.5 space-y-1.5">
+                    <div className="flex justify-between text-xs">
+                      <div className="flex gap-1 items-center">
+                        <span className="font-semibold text-black">{destination.tours}</span>
+                        <span className="text-gray-600">tours</span>
+                      </div>
+                      <div className="flex gap-1 items-center">
+                        <span className="font-semibold text-black">{destination.departures}</span>
+                        <span className="text-gray-600">departures</span>
+                      </div>
+                    </div>
+                    <div className="text-xs">
+                      <span className="font-semibold text-black">{destination.guestsTravelled.toLocaleString()}</span>
+                      <span className="text-gray-600"> guests travelled</span>
+                    </div>
                   </div>
                 </div>
               </div>

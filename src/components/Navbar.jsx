@@ -4,7 +4,7 @@ import { Backpack } from 'lucide-react';
 
 export default function Navbar() {
   return (
-    <nav className="bg-[#161234] px-4 py-4">
+    <nav className="bg-[#161234] px-4 py-4 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
