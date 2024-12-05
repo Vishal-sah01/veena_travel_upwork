@@ -88,7 +88,7 @@ export default function TravelCarousel() {
   }
 
   return (
-    <div className="relative">
+    <div className="relative py-4">
       <Carousel
         className="w-full max-w-[1280px] px-6 mx-auto"
         plugins={[autoplay.current]}
@@ -100,7 +100,7 @@ export default function TravelCarousel() {
         <CarouselContent>
           {destinations.map((destination, index) => (
             <CarouselItem key={index}>
-              <div className="relative h-[400px] w-full overflow-hidden rounded-lg">
+              <div className="relative h-[350px] w-full overflow-hidden rounded-lg">
                 {/* Background Image */}
                 <div 
                   className="absolute inset-0 bg-cover bg-center"
