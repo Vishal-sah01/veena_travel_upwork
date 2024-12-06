@@ -8,6 +8,8 @@ import Review from '../components/Review';
 import Banner from '../components/Banner';
 import TourFeatures from '../components/TourFeatures';
 import ToursCompleted from '../components/ToursCompleted';
+import TourCarousel from '../components/Tour-Carousel';
+import LuxuryTravelHero from '../components/Luxury-travel-hero';
 export default function Home() {
   return (
     <main>
@@ -21,6 +23,8 @@ export default function Home() {
       <Banner />
       <TourFeatures />
       <ToursCompleted />
+      <TourCarousel />
+      <LuxuryTravelHero />
     </main>
   );
 }
