@@ -6,7 +6,8 @@ import CarouselCard from '../components/carousel-card';
 import TourPackage from '../components/TourPackage';
 import Review from '../components/Review';
 import Banner from '../components/Banner';
-
+import TourFeatures from '../components/TourFeatures';
+import ToursCompleted from '../components/ToursCompleted';
 export default function Home() {
   return (
     <main>
@@ -18,6 +19,8 @@ export default function Home() {
       <TourPackage />
       <Review />
       <Banner />
+      <TourFeatures />
+      <ToursCompleted />
     </main>
   );
 }

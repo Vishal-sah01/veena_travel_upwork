@@ -1,8 +1,33 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Backpack } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 export default function Navbar() {
+  const [searchPlaceholder, setSearchPlaceholder] = useState("Search 'Gulmarg'");
+  
+  const destinations = [
+    "Gulmarg",
+    "Ladakh",
+    "Kerala",
+    "Rajasthan",
+    "Sikkim",
+    "Andaman",
+    "Kashmir",
+    "Manali"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const randomIndex = Math.floor(Math.random() * destinations.length);
+      setSearchPlaceholder(`Search '${destinations[randomIndex]}'`);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <nav className="bg-[#161234] px-4 py-4 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -17,7 +42,7 @@ export default function Navbar() {
           <div className="relative">
             <input
               type="text"
-              placeholder="Search 'Gulmarg'"
+              placeholder={searchPlaceholder}
               className="w-full px-4 py-2 rounded-full bg-gray-100 focus:outline-none"
             />
             <button className="absolute right-3 top-1/2 -translate-y-1/2">
