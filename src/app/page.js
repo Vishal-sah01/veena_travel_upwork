@@ -10,6 +10,9 @@ import TourFeatures from '../components/TourFeatures';
 import ToursCompleted from '../components/ToursCompleted';
 import TourCarousel from '../components/Tour-Carousel';
 import LuxuryTravelHero from '../components/Luxury-travel-hero';
+import TourIndiaCarousel from '../components/TourIndia-Carousel';
+import TravelTips from '../components/Travel-Tips';
+import Packages from '../components/Packages';
 export default function Home() {
   return (
     <main>
@@ -25,6 +28,9 @@ export default function Home() {
       <ToursCompleted />
       <TourCarousel />
       <LuxuryTravelHero />
+      <TourIndiaCarousel />
+      <TravelTips />
+      <Packages />
     </main>
   );
 }
