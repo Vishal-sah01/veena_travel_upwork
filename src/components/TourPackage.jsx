@@ -7,27 +7,27 @@ const cities = [
   {
     name: "Ahmedabad",
     tours: 145,
-    image: "/ahmedabad.jpg"
+    image: "/kerala.jpg"
   },
   {
     name: "Bangalore",
     tours: 139,
-    image: "/bangalore.jpg"
+    image: "/dubai.jpg"
   },
   {
     name: "Kolkata",
     tours: 145,
-    image: "/kolkata.jpg"
+    image: "/rajasthan.jpg"
   },
   {
     name: "Mumbai",
     tours: 277,
-    image: "/mumbai.jpg"
+    image: "/australia.jpg"
   },
   {
     name: "Pune",
     tours: 27,
-    image: "/pune.jpg"
+    image: "/kashmir.jpg"
   }
 ]
 
@@ -50,11 +50,14 @@ export default function TourPackage() {
             key={index}
             className={`
               bg-gray-50/50 rounded-lg p-3 flex items-center gap-3 hover:shadow-md transition-shadow
+              border-2 border-gray-200 hover:border-blue-200
               ${index >= 3 ? 'md:col-span-1' : ''}
             `}
           >
             {/* City Image */}
-            <div className="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 ring-1 ring-gray-200">
+            <div className="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 
+                          ring-2 ring-gray-300 shadow-lg transform transition-transform 
+                          duration-300 hover:scale-105">
               <Image
                 src={city.image}
                 alt={city.name}

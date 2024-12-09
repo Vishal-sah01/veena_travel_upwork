@@ -13,6 +13,7 @@ import LuxuryTravelHero from '../components/Luxury-travel-hero';
 import TourIndiaCarousel from '../components/TourIndia-Carousel';
 import TravelTips from '../components/Travel-Tips';
 import Packages from '../components/Packages';
+import Footer from '../components/Footer';
 export default function Home() {
   return (
     <main>
@@ -31,6 +32,7 @@ export default function Home() {
       <TourIndiaCarousel />
       <TravelTips />
       <Packages />
+      <Footer />
     </main>
   );
 }
